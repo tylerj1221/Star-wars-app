@@ -1,0 +1,49 @@
+<div class="character-list">
+  <v-container fluid>
+
+    <!-- Title -->
+    <v-row>
+      <v-col cols="12">
+        <h1 class="title">Star Wars Characters</h1>
+      </v-col>
+    </v-row>
+
+    <!-- Characters Grid -->
+    <v-row class="character-grid" justify="center">
+      <v-col
+        v-for="character in characters"
+        :key="character.id"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+        class="d-flex justify-center"
+      >
+        <v-card
+          class="character-card"
+          outlined
+          @click="goToDetail(character.id)"
+        >
+          <v-card-title class="character-name">
+            {{ character.name }}
+          </v-card-title>
+
+          <v-card-text class="character-likes">
+            Likes: {{ getLikes(character.id) }}
+          </v-card-text>
+
+          <v-card-actions class="card-actions">
+            <v-btn
+              class="like-button"
+              color="primary"
+              @click.stop="like(character.id)"
+            >
+              Like
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+
+  </v-container>
+</div>

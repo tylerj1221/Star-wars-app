@@ -1,0 +1,50 @@
+.character-details {
+  background: linear-gradient(145deg, #222, #333);
+  padding: 2rem;
+  border: 2px solid #FFE81F;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FFE81F;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #ccc;
+
+    strong {
+      color: #FFE81F;
+    }
+  }
+
+  .back-button {
+    background-color: #000 !important;
+    color: #FFE81F !important;
+    border: 2px solid #FFE81F !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+
+    &:hover {
+      background-color: #FFE81F !important;
+      color: #000 !important;
+      box-shadow: 0 0 10px #FFE81F !important;
+    }
+  }
+
+  .v-divider {
+    margin: 2rem 0;
+    border-color: #e0e0e0;
+  }
+}

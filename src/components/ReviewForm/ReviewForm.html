@@ -1,0 +1,35 @@
+<div class="review-form-container">
+  <h2>Review this character</h2>
+  <v-form ref="form" @submit.prevent="handleSubmit">
+    <v-text-field
+      v-model="review.name"
+      label="Name"
+      required
+    ></v-text-field>
+
+    <v-text-field
+      v-model="review.watchedDate"
+      label="Watched Date"
+      required
+    ></v-text-field>
+
+    <v-textarea
+      v-model="review.description"
+      label="Description"
+      required
+    ></v-textarea>
+
+    <v-select
+      :items="ratings"
+      v-model="review.rating"
+      label="Rating"
+      required
+    ></v-select>
+
+    <v-btn type="submit" class="submit-button" color="primary">Submit Review</v-btn>
+
+    <v-alert v-if="errorMessage" type="error">
+      {{ errorMessage }}
+    </v-alert>
+  </v-form>
+</div>

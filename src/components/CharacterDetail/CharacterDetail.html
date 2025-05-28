@@ -1,0 +1,40 @@
+<div class="character-details">
+  <v-container>
+
+    <!-- Character Name -->
+    <v-row>
+      <v-col cols="12">
+        <h2>{{ character.name }}</h2>
+      </v-col>
+    </v-row>
+
+    <!-- Character Attributes Grid -->
+    <v-row class="character-info" dense>
+      <v-col
+        v-for="(label, key) in attributeLabels"
+        :key="key"
+        cols="6"
+        md="3"
+      >
+        <p><strong>{{ label }}:</strong> {{ character[key] }}</p>
+      </v-col>
+    </v-row>
+
+    <!-- Review Form -->
+    <v-row class="mt-4">
+      <v-col cols="12">
+        <review-form :character-id="character.id" />
+      </v-col>
+    </v-row>
+
+    <!-- Navigation Button -->
+    <v-row>
+      <v-col cols="12">
+        <v-btn class="back-button" @click="goBack">
+          Back to List
+        </v-btn>
+      </v-col>
+    </v-row>
+
+  </v-container>
+</div>

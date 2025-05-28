@@ -1,0 +1,111 @@
+@import '/src/assets/css/_theme.scss';
+
+.character-list {
+  margin: 0 auto;
+  padding: 1rem;
+
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: theme-get(colors, primary);
+    font-family: theme-get(fonts, orbitron);
+    text-shadow: theme-get(shadows, text);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .character-grid {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: theme-get(dimensions, borderRadius);
+    padding: 1rem;
+  }
+
+  .character-card {
+    width: 100%;
+    max-width: 24.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(145deg, theme-get(colors, bgDark), theme-get(colors, bgDarker));
+    border: theme-get(dimensions, cardBorderWidth) solid theme-get(colors, primary);
+    border-radius: theme-get(dimensions, borderRadius);
+    box-shadow: theme-get(shadows, card);
+    transition: theme-get(transitions, card);
+
+    &:hover {
+      transform: translateY(-0.3125rem);
+      box-shadow: theme-get(shadows, cardHover);
+    }
+  }
+
+  .character-name {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: theme-get(colors, primary);
+    text-shadow: theme-get(shadows, text);
+    margin-bottom: 0.5rem;
+    white-space: normal;
+  }
+
+  .character-likes {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: theme-get(colors, primary);
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    font-family: theme-get(fonts, orbitron);
+    text-shadow: theme-get(shadows, text);
+  }
+
+  .card-actions {
+    justify-content: center;
+  }
+
+  .like-button {
+    background-color: #000 !important;
+    color: theme-get(colors, primary) !important;
+    border: theme-get(dimensions, cardBorderWidth) solid theme-get(colors, primary) !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: theme-get(fonts, orbitron);
+    padding: theme-get(dimensions, buttonPadding);
+    transition: theme-get(transitions, button);
+    box-shadow: theme-get(shadows, button);
+
+    &:hover {
+      background-color: theme-get(colors, primary) !important;
+      color: #000 !important;
+      box-shadow: theme-get(shadows, buttonHover) !important;
+    }
+  }
+}
+
+@media (max-width: 40rem) {
+  .character-list {
+    padding: 0.75rem;
+    
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .character-card {
+      padding: 1rem;
+      max-width: 100%;
+    }
+    
+    .character-name {
+      font-size: 0.9rem;
+    }
+    
+    .character-likes {
+      font-size: 1rem;
+      letter-spacing: 0.05rem;
+    }
+    
+    .like-button {
+      padding: 0.5rem;
+    }
+  }
+}

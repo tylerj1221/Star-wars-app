@@ -1,0 +1,52 @@
+.review-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #555, #777);
+  border: 2px solid #FFE81F;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #FFE81F;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  .v-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  ::v-deep(.submit-button) {
+    background-color: #000 !important;
+    color: #FFE81F !important;
+    border: 2px solid #FFE81F !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  ::v-deep(.submit-button:hover) {
+    background-color: #FFE81F !important;
+    color: #000 !important;
+    box-shadow: 0 0 10px #FFE81F !important;
+  }
+
+  ::v-deep(.v-alert) {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  ::v-deep(.v-label) {
+    color: #FFE81F !important;
+  }
+}
